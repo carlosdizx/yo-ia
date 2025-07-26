@@ -1,4 +1,4 @@
-import streamlit as st
+import pandas as pd
 
 
 def statistics_banner(st):
@@ -34,6 +34,10 @@ def statistics_banner(st):
             len(message["content"]) for message in st.session_state.messages if message["role"] == "user")
         num_letters_ai = sum(
             len(message["content"]) for message in st.session_state.messages if message["role"] == "ai")
+        df = pd.DataFrame(st.session_state.messages)
+
+        st.sidebar.line_chart(df)
+        st.sidebar.area_chart(df)
 
         st.sidebar.markdown(f"### {cha_messages['title']}")
         st.sidebar.markdown(f"{cha_messages['subtitle']}: {num_messages}")

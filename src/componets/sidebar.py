@@ -19,6 +19,17 @@ def sidebar(st):
 
     st.logo(flag_image, icon_image=flag_image)
 
-    st.sidebar.markdown("### Enlaces rápidos / Quick Links")
+    messages = {
+        "es": {
+            "title_links": "Enlaces rápidos"
+        },
+        "en": {
+            "title_links": "Quick Links",
+        }
+    }
+
+    text = messages[st.session_state.language]["title_links"]
+
+    st.sidebar.markdown(f"### {text}")
     st.sidebar.markdown("[Linkedin](https://www.linkedin.com/in/carlos-ernesto-diaz-basante/)")
     st.sidebar.markdown("[GitHub](https://github.com/carlosdizx)")

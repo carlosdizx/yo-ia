@@ -6,7 +6,8 @@ def statistics_banner(st):
         "es": {
             "chats": {
                 "title": "Estadísticas del chat",
-                "subtitle": "Mensajes enviados",
+                "subtitle0": "Mensajes enviados",
+                "subtitle1": "Cantidad de palabras enviadas",
                 "subtitle2": "Cantidad de letras enviadas",
                 "subtitle3": "Cantidad de letras enviadas por el usuario",
                 "subtitle4": "Cantidad de letras enviadas por la IA",
@@ -16,7 +17,8 @@ def statistics_banner(st):
         "en": {
             "chats": {
                 "title": "Chat Statistics",
-                "subtitle": "Messages sent",
+                "subtitle0": "Messages sent",
+                "subtitle1": "Number of words sent",
                 "subtitle2": "Number of letters sent",
                 "subtitle3": "Number of letters sent by the user",
                 "subtitle4": "Number of letters sent by the AI",
@@ -40,7 +42,7 @@ def statistics_banner(st):
 
         st.sidebar.markdown(f"### {cha_messages['title']}")
         st.sidebar.markdown(
-            f"{cha_messages['subtitle']}: {df.shape[0]}"
+            f"{cha_messages['subtitle0']}: {df.shape[0]}"
             f"(User: {len(df_user)},"
             f" AI: {len(df_ai)})")
 

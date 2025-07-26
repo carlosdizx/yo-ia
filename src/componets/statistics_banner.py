@@ -33,13 +33,16 @@ def statistics_banner(st):
             "content": [message["content"] for message in st.session_state.messages],
         })
 
-        message_count_by_role = df['role'].value_counts().to_dict()
+        df_grouped = df.groupby('role')['content'].apply(list)
+
+        df_user = df_grouped.get('user', [])
+        df_ai = df_grouped.get('ai', [])
 
         st.sidebar.markdown(f"### {cha_messages['title']}")
         st.sidebar.markdown(
             f"{cha_messages['subtitle']}: {df.shape[0]}"
-            f"(User: {message_count_by_role.get('user', 0)},"
-            f" AI: {message_count_by_role.get('ai', 0)})")
+            f"(User: {len(df_user)},"
+            f" AI: {len(df_ai)})")
 
         # st.sidebar.markdown(f"{cha_messages['subtitle2']}: {num_letters}")
         # st.sidebar.markdown(f"{cha_messages['subtitle3']}: {num_letters_user}")

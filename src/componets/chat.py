@@ -24,6 +24,9 @@ def chat(st):
         response = text["response"]
         st.session_state.messages.append({"role": "ai", "content": response})
 
-    for message in st.session_state.messages:
+    def message_generator():
+        yield from st.session_state.messages
+
+    for message in message_generator():
         with st.chat_message(message["role"]):
             st.markdown(message["content"])

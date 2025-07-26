@@ -28,22 +28,22 @@ def statistics_banner(st):
     cha_messages = messages[st.session_state.language]["chats"]
 
     if "messages" in st.session_state:
-        num_messages = len(st.session_state.messages)
-        num_letters = sum(len(message["content"]) for message in st.session_state.messages)
-        num_letters_user = sum(
-            len(message["content"]) for message in st.session_state.messages if message["role"] == "user")
-        num_letters_ai = sum(
-            len(message["content"]) for message in st.session_state.messages if message["role"] == "ai")
-        df = pd.DataFrame(st.session_state.messages)
+        df = pd.DataFrame({
+            "role": [message["role"] for message in st.session_state.messages],
+            "content": [message["content"] for message in st.session_state.messages],
+        })
 
-        st.sidebar.line_chart(df)
-        st.sidebar.area_chart(df)
+        message_count_by_role = df['role'].value_counts().to_dict()
 
         st.sidebar.markdown(f"### {cha_messages['title']}")
-        st.sidebar.markdown(f"{cha_messages['subtitle']}: {num_messages}")
-        st.sidebar.markdown(f"{cha_messages['subtitle2']}: {num_letters}")
-        st.sidebar.markdown(f"{cha_messages['subtitle3']}: {num_letters_user}")
-        st.sidebar.markdown(f"{cha_messages['subtitle4']}: {num_letters_ai}")
+        st.sidebar.markdown(
+            f"{cha_messages['subtitle']}: {df.shape[0]}"
+            f"(User: {message_count_by_role.get('user', 0)},"
+            f" AI: {message_count_by_role.get('ai', 0)})")
+
+        # st.sidebar.markdown(f"{cha_messages['subtitle2']}: {num_letters}")
+        # st.sidebar.markdown(f"{cha_messages['subtitle3']}: {num_letters_user}")
+        # st.sidebar.markdown(f"{cha_messages['subtitle4']}: {num_letters_ai}")
 
     reset_session_text = messages[st.session_state.language]["reset_session"]
 

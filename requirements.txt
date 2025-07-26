@@ -1,5 +1,4 @@
 streamlit
-streamlit-option-menu
 openai
 google-generativeai
 dotenv

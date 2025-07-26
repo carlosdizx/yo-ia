@@ -22,5 +22,4 @@ def banner(st):
     (st.chat_message('ai')
      .info("""Puedes hacerme preguntas sobre mi creador, su profesión y experiencia, temas de interés, etc.
      También puedes preguntarme sobre sus gustos y hobbies, o descargar su CV en formato PDF.
-     Puedes darme tu nombre y subir tu foto para saber quien eres.
      """))

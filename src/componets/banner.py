@@ -1,3 +1,6 @@
+import streamlit as stt
+
+
 def banner(st):
     messages = {
         "es": {
@@ -39,6 +42,8 @@ def banner(st):
     text = messages[current_language]
 
     st.title(text["title"])
+    stt.image("https://avatars.githubusercontent.com/u/61630633?s=400&u=625b303850002107e37862d6ccf30147c9a47a14",
+              caption="Carlos Ernesto Díaz Díaz 18-06-2025")
     st.chat_message("ai").info(text["info"])
 
     for question in text["questions"]:

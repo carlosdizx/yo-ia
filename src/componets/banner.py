@@ -1,7 +1,7 @@
 def banner(st):
     messages = {
         "es": {
-            "title": "IM-IA",
+            "title": "YO-IA",
             "info": "¡Hola! Soy **YO-IA**, asistente personal diseñado por **Carlos Ernesto Díaz Basante**. Estoy "
                     "aquí para responder cualquier pregunta sobre mi creador y proporcionar detalles precisos sobre "
                     "su vida. "
@@ -18,8 +18,8 @@ def banner(st):
                        "etc. También puedes preguntarme sobre sus gustos y hobbies, o descargar su CV en formato PDF."
         },
         "en": {
-            "title": "YO-IA",
-            "info": "Hello! I am **YO-IA**, a personal assistant designed by **Carlos Ernesto Díaz Basante**. I am "
+            "title": "ME-IA",
+            "info": "Hello! I am **ME-IA**, a personal assistant designed by **Carlos Ernesto Díaz Basante**. I am "
                     "here to answer any questions about my creator and provide detailed information about his life. "
                     "You can change the language in the sidebar.",
             "questions": [

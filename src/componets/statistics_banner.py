@@ -40,8 +40,11 @@ def statistics_banner(st):
         df_user = df_grouped.get('user', [])
         df_ai = df_grouped.get('ai', [])
 
-        words_user = sum(len(str(msg).split()) for msg in df_user)
-        words_ai = sum(len(str(msg).split()) for msg in df_ai)
+        words_user = [str(msg).split() for msg in df_user]
+        words_ai = [str(msg).split() for msg in df_ai]
+
+        sum_words_user = sum([len(msg) for msg in words_user])
+        sum_words_ai = sum([len(msg) for msg in words_ai])
 
         st.sidebar.markdown(
             f"{cha_messages['subtitle0']}: {df.shape[0]}<br>"
@@ -51,9 +54,9 @@ def statistics_banner(st):
         )
 
         st.sidebar.markdown(
-            f"{cha_messages['subtitle1']}: {words_user + words_ai}<br>"
-            f"User: {words_user}<br>"
-            f"AI: {words_ai}",
+            f"{cha_messages['subtitle1']}: {sum_words_user + sum_words_ai}<br>"
+            f"User: {sum_words_user}<br>"
+            f"AI: {sum_words_ai}",
             unsafe_allow_html=True
         )
 

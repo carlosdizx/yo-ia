@@ -21,7 +21,7 @@ def sidebar(st):
 
     messages = {
         "es": {
-            "title_links": "Enlaces rápidos"
+            "title_links": "Enlaces rápidos",
         },
         "en": {
             "title_links": "Quick Links",

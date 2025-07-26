@@ -19,3 +19,6 @@ def sidebar(st):
 
     st.logo(flag_image, icon_image=flag_image)
 
+    st.sidebar.markdown("### Enlaces rápidos / Quick Links")
+    st.sidebar.markdown("[Linkedin](https://www.linkedin.com/in/carlos-ernesto-diaz-basante/)")
+    st.sidebar.markdown("[GitHub](https://github.com/carlosdizx)")

@@ -19,6 +19,8 @@ def banner(st):
     if st.button("Temas de interés (centros de la casa, proyectos, y mucho más)"):
         st.session_state.chat_input = "Temas de interés (centros de la casa, proyectos, y mucho más)"
 
-    return st.chat_input(key="chat_input",
-                         placeholder="Escribe aquí tu mensaje...",
-                         max_chars=1000)
+    (st.chat_message('ai')
+     .info("""Puedes hacerme preguntas sobre mi creador, su profesión y experiencia, temas de interés, etc.
+     También puedes preguntarme sobre sus gustos y hobbies, o descargar su CV en formato PDF.
+     Puedes darme tu nombre y subir tu foto para saber quien eres.
+     """))

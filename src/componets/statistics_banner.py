@@ -9,6 +9,11 @@ def statistics_banner(st):
                 "subtitle0": "Mensajes enviados",
                 "subtitle1": "Cantidad de palabras enviadas",
                 "subtitle2": "Cantidad de letras enviadas",
+                "table":  {
+                    "messages": "Mensajes",
+                    "words": "Palabras",
+                    "letters": "Letras"
+                }
             },
             "reset_session": "Reiniciar sesión"
         },
@@ -18,6 +23,11 @@ def statistics_banner(st):
                 "subtitle0": "Messages sent",
                 "subtitle1": "Number of words sent",
                 "subtitle2": "Number of letters sent",
+                "table": {
+                    "messages": "Messages",
+                    "words": "Words",
+                    "letters": "Letters"
+                }
             },
             "reset_session": "Reset Session"
         }
@@ -65,6 +75,14 @@ def statistics_banner(st):
             f"AI: {letters_ai}",
             unsafe_allow_html=True
         )
+
+        summary_df = pd.DataFrame({
+            cha_messages['table']['messages']: [len(df_user), len(df_ai)],
+            cha_messages['table']['words']: [sum_words_user, sum_words_ai],
+            cha_messages['table']['letters']: [letters_user, letters_ai]
+        }, index=['User', 'AI'])
+
+        st.sidebar.table(summary_df)
 
     reset_session_text = messages[st.session_state.language]["reset_session"]
 

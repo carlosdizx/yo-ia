@@ -9,8 +9,6 @@ def statistics_banner(st):
                 "subtitle0": "Mensajes enviados",
                 "subtitle1": "Cantidad de palabras enviadas",
                 "subtitle2": "Cantidad de letras enviadas",
-                "subtitle3": "Cantidad de letras enviadas por el usuario",
-                "subtitle4": "Cantidad de letras enviadas por la IA",
             },
             "reset_session": "Reiniciar sesión"
         },
@@ -20,8 +18,6 @@ def statistics_banner(st):
                 "subtitle0": "Messages sent",
                 "subtitle1": "Number of words sent",
                 "subtitle2": "Number of letters sent",
-                "subtitle3": "Number of letters sent by the user",
-                "subtitle4": "Number of letters sent by the AI",
             },
             "reset_session": "Reset Session"
         }
@@ -46,6 +42,9 @@ def statistics_banner(st):
         sum_words_user = sum([len(msg) for msg in words_user])
         sum_words_ai = sum([len(msg) for msg in words_ai])
 
+        letters_user = sum(len(str(msg).replace(" ", "")) for msg in df_user)
+        letters_ai = sum(len(str(msg).replace(" ", "")) for msg in df_ai)
+
         st.sidebar.markdown(
             f"{cha_messages['subtitle0']}: {df.shape[0]}<br>"
             f"User: {len(df_user)}<br>"
@@ -57,6 +56,13 @@ def statistics_banner(st):
             f"{cha_messages['subtitle1']}: {sum_words_user + sum_words_ai}<br>"
             f"User: {sum_words_user}<br>"
             f"AI: {sum_words_ai}",
+            unsafe_allow_html=True
+        )
+
+        st.sidebar.markdown(
+            f"{cha_messages['subtitle2']}: {letters_user + letters_ai}<br>"
+            f"User: {letters_user}<br>"
+            f"AI: {letters_ai}",
             unsafe_allow_html=True
         )
 

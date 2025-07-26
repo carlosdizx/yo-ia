@@ -4,7 +4,8 @@ def banner(st):
             "title": "IM-IA",
             "info": "¡Hola! Soy **YO-IA**, asistente personal diseñado por **Carlos Ernesto Díaz Basante**. Estoy "
                     "aquí para responder cualquier pregunta sobre mi creador y proporcionar detalles precisos sobre "
-                    "su vida.",
+                    "su vida. "
+                    "Puedes cambiar el idioma en la barra lateral.",
             "questions": [
                 "¿Quién es Carlos Ernesto Díaz Basante?",
                 "Su profesión y experiencia",
@@ -19,7 +20,8 @@ def banner(st):
         "en": {
             "title": "YO-IA",
             "info": "Hello! I am **YO-IA**, a personal assistant designed by **Carlos Ernesto Díaz Basante**. I am "
-                    "here to answer any questions about my creator and provide detailed information about his life.",
+                    "here to answer any questions about my creator and provide detailed information about his life. "
+                    "You can change the language in the sidebar.",
             "questions": [
                 "Who is Carlos Ernesto Díaz Basante?",
                 "His profession and experience",

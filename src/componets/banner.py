@@ -31,7 +31,7 @@ def banner(st):
                 "Areas of interest",
                 "Likes and hobbies",
                 "Download his CV",
-                "Projects, achievements and education"
+                "Projects, achievements education and certifications"
             ],
             "ai_info": "You can ask me about my creator, his profession and experience, areas of interest, etc. You "
                        "can also ask about his likes and hobbies, or download his CV in PDF format."

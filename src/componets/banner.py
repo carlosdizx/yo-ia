@@ -15,7 +15,7 @@ def banner(st):
                 "Áreas de interés",
                 "Gustos y hobbies",
                 "Descargar su CV",
-                "Temas de interés (centros de la casa, proyectos, y mucho más)"
+                "Proyectos, logros y educación"
             ],
             "ai_info": "Puedes hacerme preguntas sobre mi creador, su profesión y experiencia, temas de interés, "
                        "etc. También puedes preguntarme sobre sus gustos y hobbies, o descargar su CV en formato PDF."
@@ -31,7 +31,7 @@ def banner(st):
                 "Areas of interest",
                 "Likes and hobbies",
                 "Download his CV",
-                "Topics of interest (centers of the house, projects, and more)"
+                "Projects, achievements and education"
             ],
             "ai_info": "You can ask me about my creator, his profession and experience, areas of interest, etc. You "
                        "can also ask about his likes and hobbies, or download his CV in PDF format."

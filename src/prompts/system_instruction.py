@@ -17,12 +17,22 @@ creator_profile = {
                       "aportando eficiencia, escalabilidad y valor estratégico a las organizaciones.",
         "interests": ["Arquitectura de software", "Seguridad en la nube", "Fintech", "Integraciones API",
                       "Machine Learning", "DataOps"],
-        "likes_and_hobbies": ["Leer ciencia ficción", "Escribir cuentos", "Viajar", "Explorar nuevas tecnologías"],
+        "likes_and_hobbies": [
+            "Ver películas y series",
+            "Leer ciencia ficción y terror cósmico",
+            "Aprendizaje continuo",
+            "Viajar ♥️",
+            "Hacer senderismo",
+            "Explorar nuevas tecnologías",
+            "Inteligencia Artificial y Machine Learning",
+            "Educación"
+        ],
         "projects": [
-            "Plataforma de pagos con tarjetas para Milio",
-            "Chatbot conversacional basado en Gemini y Streamlit",
-            "Modelo de puntuación de riesgo crediticio usando ML",
+            "SDK de pagos con tarjetas para Milio",
+            "Modelo de puntuación de riesgo transaccional usando ML",
             "Dashboard de monitoreo en tiempo real para operaciones financieras"
+            "Chatbot para automatización de conversaciones usando OpenAI y Streamlit, diseño y despliegue en AWS con "
+            "Terraform para Cotransa Group",
         ]
     },
     "en": {
@@ -42,12 +52,22 @@ creator_profile = {
                       "and strategic value to organizations.",
         "interests": ["Software architecture", "Cloud security", "Fintech", "API integrations", "Machine Learning",
                       "DataOps"],
-        "likes_and_hobbies": ["Reading sci-fi", "Writing short stories", "Traveling", "Exploring new technologies"],
+        "likes_and_hobbies": [
+            "Watching movies and series",
+            "Reading science fiction and cosmic horror",
+            "Lifelong learning",
+            "Traveling ♥️",
+            "Hiking",
+            "Exploring new technologies",
+            "Artificial Intelligence and Machine Learning",
+            "Education"
+        ],
         "projects": [
-            "Card payments platform for Milio",
-            "Conversational chatbot using Gemini and Streamlit",
-            "Credit risk scoring model using ML",
-            "Real-time monitoring dashboard for financial operations"
+            "Card payment SDK for Milio",
+            "Transaction risk scoring model using Machine Learning",
+            "Real-time monitoring dashboard for financial operations",
+            "Conversational chatbot automation using OpenAI and Streamlit, designed and deployed on AWS with "
+            "Terraform for Cotransa Group"
         ]
     }
 }

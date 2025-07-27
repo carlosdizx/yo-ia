@@ -5,7 +5,7 @@ def banner(st):
     messages = {
         "es": {
             "title": "AI-Me",
-            "info": "¡Hola! Soy **YO-IA**, asistente personal diseñado por **Carlos Ernesto Díaz Basante**. Estoy "
+            "info": "¡Hola! Soy **ME-IA**, asistente personal diseñado por **Carlos Ernesto Díaz Basante**. Estoy "
                     "aquí para responder cualquier pregunta sobre mi creador y proporcionar detalles precisos sobre "
                     "su vida. "
                     "Puedes cambiar el idioma en la barra lateral.",

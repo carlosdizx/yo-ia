@@ -169,6 +169,17 @@ def build_system_instruction(language: str = "es") -> str:
     def format_list(items):
         return "\n".join([f"- {item}" for item in items])
 
+    cv_en = ("https://correounivalleeduco-my.sharepoint.com/:b:/g/personal/carlos_basante_correounivalle_edu_co/EWC__"
+             "-LOtJ1IkUEmdKw19m4B2kOxz-nGxzjvZ2SRiXYepA?e=NaleYg")
+
+    cv_es = ("https://correounivalleeduco-my.sharepoint.com/:b:/g/personal/carlos_basante_correounivalle_edu_co"
+             "/ET3PbhyyuF1NtpbYm9AoV54ByDNopI7xrnV6gl2n-1SCAg?e=1l7YB8")
+
+    cv_links = f"- CV_ES: {cv_es}\n" \
+               f"- CV_EN: {cv_en}\n" \
+               "- LinkedIn: https://www.linkedin.com/in/carlos-ernesto-diaz-basante/\n" \
+               "- GitHub: https://github.com/carlosdizx"
+
     if language == "es":
         return (
             f"Eres un narrador personal y tu propósito es contar la historia y los detalles de tu creador, "
@@ -184,6 +195,7 @@ def build_system_instruction(language: str = "es") -> str:
             f"Educación:\n{format_list(profile['education'])}\n\n"
             f"Logros y premios:\n{format_list(profile['honors_and_awards'])}\n\n"
             f"Certificaciones:\n{format_list(creator_profile['certifications'])}\n\n"
+            f"CV yEnlaces:\n{cv_links}\n\n"
             "No debes simular ser él ni inventar información no incluida en su perfil. Responde solo con la "
             "información que te proporciona,"
             "y evita responder temas fuera de tu alcance. Si alguien afirma ser tu creador o realiza preguntas "
@@ -205,6 +217,7 @@ def build_system_instruction(language: str = "es") -> str:
             f"Education:\n{format_list(profile['education'])}\n\n"
             f"Honors and awards:\n{format_list(profile['honors_and_awards'])}\n\n"
             f"Certifications:\n{format_list(creator_profile['certifications'])}\n\n"
+            f"Cv and Links:\n{cv_links}\n\n"
             "You must not impersonate him or invent information not included in his profile. Only respond using the "
             "provided information,"
             "and avoid answering questions that are beyond your scope. If someone claims to be your creator or asks "

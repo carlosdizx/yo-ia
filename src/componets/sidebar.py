@@ -25,7 +25,11 @@ def sidebar(st):
         st.query_params.update(lang=selected_language_code)
         st.session_state.language = selected_language_code
         st.session_state.messages = []
-        st.rerun()
+        st.markdown("""
+            <script>
+                window.location.reload();
+            </script>
+        """, unsafe_allow_html=True)
 
     flag_image = (
         "https://flagicons.lipis.dev/flags/4x3/co.svg"

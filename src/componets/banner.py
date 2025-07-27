@@ -15,7 +15,7 @@ def banner(st):
                 "Áreas de interés",
                 "Gustos y hobbies",
                 "Descargar su CV",
-                "Proyectos, logros y educación"
+                "Proyectos, logros, educación y certificaciones"
             ],
             "ai_info": "Puedes hacerme preguntas sobre mi creador, su profesión y experiencia, temas de interés, "
                        "etc. También puedes preguntarme sobre sus gustos y hobbies, o descargar su CV en formato PDF."

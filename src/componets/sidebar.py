@@ -1,3 +1,6 @@
+from src.services.gemini_service import GeminiService
+
+
 def sidebar(st):
     languages = {
         "Español": "es",
@@ -25,6 +28,10 @@ def sidebar(st):
         st.query_params.update(lang=selected_language_code)
         st.session_state.language = selected_language_code
         st.session_state.messages = []
+
+        # Resetear completamente el servicio de Gemini
+        GeminiService.reset_instance()
+
         st.markdown("""
             <script>
                 window.location.reload();

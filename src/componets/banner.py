@@ -11,7 +11,7 @@ def banner(st):
                 "Su profesión y experiencia",
                 "Áreas de interés",
                 "Gustos y hobbies",
-                "Obtener su CV",
+                "Obtener su CV y redes sociales",
                 "Proyectos, logros, educación y certificaciones"
             ],
             "ai_info": "Puedes hacerme preguntas sobre mi creador, su profesión y experiencia, temas de interés, "
@@ -27,7 +27,7 @@ def banner(st):
                 "His profession and experience",
                 "Areas of interest",
                 "Likes and hobbies",
-                "Get his CV",
+                "Get his CV and social media",
                 "Projects, achievements education and certifications"
             ],
             "ai_info": "You can ask me about my creator, his profession and experience, areas of interest, etc. You "

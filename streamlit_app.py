@@ -6,7 +6,7 @@ from src.componets.statistics_banner import statistics_banner
 from src.services.gemini_service import GeminiService
 
 sidebar(st)
-banner(st)
 client = GeminiService(st.session_state.language)
+banner(st, client)
 chat(st, client)
 statistics_banner(st)

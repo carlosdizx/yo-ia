@@ -1,4 +1,6 @@
-def banner(st):
+from src.services.gemini_service import GeminiService
+
+def banner(st, client: GeminiService):
     messages = {
         "es": {
             "title": "AI-Me",
@@ -15,7 +17,8 @@ def banner(st):
                 "Proyectos, logros, educación y certificaciones"
             ],
             "ai_info": "Puedes hacerme preguntas sobre mi creador, su profesión y experiencia, temas de interés, "
-                       "etc. También puedes preguntarme sobre sus gustos y hobbies, o descargar su CV en formato PDF."
+                       "etc. También puedes preguntarme sobre sus gustos y hobbies, o descargar su CV en formato PDF.",
+            "thinking": "Pensando..."
         },
         "en": {
             "title": "AI-Me",
@@ -31,7 +34,8 @@ def banner(st):
                 "Projects, achievements education and certifications"
             ],
             "ai_info": "You can ask me about my creator, his profession and experience, areas of interest, etc. You "
-                       "can also ask about his likes and hobbies, or download his CV in PDF format."
+                       "can also ask about his likes and hobbies, or download his CV in PDF format.",
+            "thinking": "Thinking..."
         }
     }
 
@@ -43,6 +47,20 @@ def banner(st):
 
     for question in text["questions"]:
         if st.button(question):
-            st.session_state.chat_input = question
+            # Agregar la pregunta del usuario a los mensajes
+            if "messages" not in st.session_state:
+                st.session_state.messages = []
+            
+            st.session_state.messages.append({"role": "user", "content": question})
+            
+            # Mostrar spinner mientras se procesa la respuesta
+            with st.spinner(text.get("thinking", "Pensando..." if current_language == "es" else "Thinking...")):
+                response = client.get_response(question)
+            
+            # Agregar la respuesta del AI a los mensajes
+            st.session_state.messages.append({"role": "ai", "content": response})
+            
+            # Rerun para actualizar la interfaz
+            st.rerun()
 
     st.chat_message("ai").info(text["ai_info"])

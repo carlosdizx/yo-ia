@@ -17,3 +17,11 @@ A simple Streamlit app that shows how to build a chatbot using OpenAI's GPT-3.5.
    ```
    $ streamlit run streamlit_app.py
    ```
+
+Add your environment variables to the `.streamlit/secrets.toml` file
+### Example:
+```toml
+[GEMINI]
+API_KEY = "...."
+MODEL = "gemini-2.5-flash"
+```
